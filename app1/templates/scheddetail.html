@@ -1,0 +1,104 @@
+{% extends 'home.html' %}
+{% load static from staticfiles%}
+
+<!DOCTYPE html>
+<html>
+{% block content %}
+<head>
+<style>
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+</style>
+</head>
+<body>
+<h3 class="w3-center w3-padding-20"><span class="w3-tag w3-wide">AVAILABILITY OF THE DOCTOR</span></h3>
+
+
+
+<table style="border-collapse: collapse; width: 100%;">
+
+  <tr>
+    <th>DOCTOR NAME</th>
+    <th>AVAILABLE DATE</th>
+    <th>FROM</th>
+    <th>TO<th>
+    <th>TOTAL PEOPLE</th>
+    <th>BOOK</th>
+
+
+  </tr>
+  <tr>
+    <td>{{scheddetail.dc_name}}</td>
+    <td>{{scheddetail.day}}</td>
+    <td>{{scheddetail.start_time}}</td>
+    <td>{{scheddetail.end_time}}</td>
+    <td>{{scheddetail.num_ppl}}</td>
+    <td><a href="{% url 'bookappoint' scheddetail.id %}">BOOK NOW</a></td>
+
+
+
+  </tr> 
+
+
+</table>
+
+
+</body>
+{% endblock %}
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .container {
+      padding: 80px 120px;
+  }
+</style>
+</head>
+
+<body>
+<div class="container text-center">
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h2><b>{{doct_detail.Doc_name }}</b></h2><br>
+    </div>
+    <div>
+        <h3>schedule</h3>
+        {% for i in sch_detail %}
+                        <div style="float: left; width: 200px;margin-top: 15px;">       
+                        <ul class="nav nav-tabs nav-justified">
+
+                                <li>{{i.day}}></li>
+                                <h6>{{i.start_time}}</h6>
+                                <h6>{{i.end_time}}</h6>
+                                <h6>{{i.num_ppl}}</h6>
+                                <button type="button" class="btn btn-danger btn-rounded"><a href="">Book</a></button>
+                        </ul>
+                        </div>   
+                        {% endfor %}
+
+           </div>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+ -->

@@ -1,0 +1,118 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+
+{% block content %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/medi.css' %}">
+</head>
+<body>
+<div class="w3-top" style="background-image: url(https://www.doctornews.com/sites/default/files/migrated_files/uploads/2017/02/The-Wearable-Tech-Challenge-Philips-Gets-Into-the-Game.jpg); background-size: cover; background: no-repeat:repeat; height:300px;">
+  <div class="w3-row w3-padding w3-grayscale">
+    <div class="w3-col s2 w3-button w3-block w3-black">
+     <a href=""><img class='logo' src="{% static 'images/logo1.png' %}">
+      <b><h1 class='he1'>MED4U</h1></b> </a>
+    </div>
+  </div>
+
+    <div class="container">
+      <center><h1>Welcome to Admin Page</h1></center>
+        <div style="float:right;"> <a href="/login/"><button><span class="glyphicon glyphicon-user"></span>{{user.username}}</button></a>
+
+        <a href="/logout/"><button><span class="glyphicon glyphicon-log-in"></span>Logout</button></a></div>
+ 
+        </div>
+</div>
+<div>
+<div class="container" style="margin: 10px 10px 10px 10px;">
+  <div class="row">
+      <div class="col-sm-2">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">DOCTORS
+              <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'Docdetail' %}">ADD</a></li>
+                  <li><a href="{% url 'Doclist2' %}">VIEW and EDIT</a></li>
+                  <li><a href="{% url 'Schedule' %}">Schedule ADD</a
+                  <li><a href="{% url 'schedule11' %}">Schedule VIEW</a>
+                </ul>
+        </div> 
+      </div>
+      
+      <div class="col-sm-2">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">DEPARTMENTS
+            <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+                <li><a href="{% url 'Depart' %}">ADD</a></li>
+            
+                <li><a href="{% url 'DepartView2' %}">VIEW</a><li>
+            </ul>
+        </div> 
+      </div>
+
+
+      <div class="col-sm-2">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">BOOK DOCTOR
+            <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+                <li><a href=""> ADD</a></li>
+                <li><a href="#">EDIT</a></li>
+            </ul>
+        </div> 
+      </div>
+   
+      <div class="col-sm-2">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">USER
+            <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+                <li><a href="{% url 'register' %}">ADD</a></li>
+                <li><a href="{% url 'Userlist' %}">VIEW</a></li>
+                <li><a href="#">DELETE</a></li>
+            </ul>
+        </div> 
+      </div>
+   
+    
+      <div class="col-sm-2">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">HOME
+            <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+                <li><a href="{% url 'D_View2' %}">VIEW</a></li>
+                
+            </ul>
+        </div> 
+      </div>
+   
+   
+      <div class="col-sm-2">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">EXTRAS
+            <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+                <li><a href="">add rooms</a></li>
+                <li><a href="">add food</li>
+                
+            </ul>
+    
+        </div>
+      </div> 
+
+
+</div>
+</body>
+ {% endblock %}
+</html>

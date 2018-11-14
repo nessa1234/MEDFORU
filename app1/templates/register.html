@@ -1,0 +1,34 @@
+
+{% extends 'home.html' %}
+{% load static from staticfiles %}
+
+{% block content%}
+<head>
+         <title>Register</title>
+         <link rel="stylesheet" type="text/css" href="{% static 'css/medi.css' %}">
+     
+     </head>
+     <body>
+        <div style="margin: 10px 10px 10px 10px;">
+        <center>
+            <form class='form' method="post" action="." style="position: relative;
+
+                background: #FFFFFF;
+                max-width: 900px;
+                margin: 10px 10px 10px 10px;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)">
+
+             {% csrf_token %}
+
+             {{form1.as_p}}
+             {{form2.as_p}}
+
+             <button>REGISTER</button>
+         </form>
+     </center>
+     </div>
+     </body>
+
+{% endblock %}

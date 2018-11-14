@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="container">
+	<div class="third">
+
+<table border="1">
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+{% for i in DepartmentlistView %}
+<tr>
+<td><a href="{% url 'D_Detail' i.id %}"><img src="{{i.depart_photo.url}}" height="100px" width="100px"></a></td>
+<td>{{i.depart_name}}</td>
+<td>{{i.depart_description}}</td>
+<td><a href="{% url 'Deprtadd' i.id %}">update</a></td>
+</tr>
+</table></div></div>
+{% endfor %}
+
+{% endblock %}

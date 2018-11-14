@@ -1,0 +1,44 @@
+{% load static from staticfiles %}
+{% block content %}
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT US</span></h5>
+    <p>The Hospital was founded in Kochi by Dr. Madson Qella, it is a 750-bed multi-specialty acute-cum-critical care referral hospital, is one of the most well-equipped and premier hospitals in <span id="dots">...</span><span id="more">South India.
+    We have to our credit, numerous path breaking achievements in the field, which is indeed the result of our undeterred pursuit of excellence in healthcare. In continuation to our legacy of care, compassion and commitment, as established by our founder Dr. P. A. Verghese , Medical Trust Hospital now has a world-class medical complex integrated with the best of all infrastructure and medical expertise, to cater to the needs of International and local patients with equal passion. All adding up to our steadfast dedication which ensures that on the road to recovery, there are no unpleasant surprises.
+
+    Hospital also dedicates its advanced facilities and know-how to research and development making further inroads in the field of health and medicine. The hospital runs educational institutions to impart knowledge and training in Nursing, Physiotherapy, Paramedical Sciences and Radiological Techniques, to build an efficient workforce of healthcare professionals, to adequately handle the global requirements of medical and surgical emergencies.</span></p>
+
+    <button onclick="myFunction()" id="myBtn">Read more</button>
+
+          <script>
+                  function myFunction()
+                   {
+                      var dots = document.getElementById("dots");
+                      var moreText = document.getElementById("more");
+                      var btnText = document.getElementById("myBtn");
+
+                      if (dots.style.display === "none") {
+                          dots.style.display = "inline";
+                          btnText.innerHTML = "Read more"; 
+                          moreText.style.display = "none";}
+                      else {
+                          dots.style.display = "none";
+                          btnText.innerHTML = "Read less"; 
+                          moreText.style.display = "inline";
+                            }
+                   }
+          </script>
+
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Dr. Madson Qella</p>
+    </div>
+    <img src="https://media.glassdoor.com/l/120918/north-kansas-city-hospital-office.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday </p>
+    <p><strong>Address:</strong> 15 Ravinagar street, 218/350,KOCHI</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+{% load static from staticfiles%}
+
+{% block content %}
+            <div class='container center'>
+                <div id="myDIV">
+                	<div style="border-style: dashed;width:80%;text-align: center; background-image: linear-gradient(to right bottom, lightblue, lightgrey, white, blue, lightblue);margin-top: 25px;margin-left:100px;float: left;">
+                    <div>
+                          <h3>Click Proceed to confirm appointment..</h3>
+                          <h4>Username: {{ user.username }}
+                          <h4>Doctor name : {{ docname }}</h4>
+                          <h4>Day : {{ day }}</h4>
+                          <h4>Time : {{ s_time}} | {{e_time}}</h4>
+                          <h4>Number of people: {{ no_ppl }}</h4>
+                          <h4>Payable amount  :300 /-</h4>
+                          <h4></h4>
+                          <div class='pm-button'><a href='https://www.payumoney.com/sandbox/paybypayumoney/#/059F448088587AB5F93888E07664412F'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png' /></a></div> 
+                      </div>
+
+                    	</div>
+               
+          
+                </div>
+
+
+            </div>
+{% endblock %}

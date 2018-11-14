@@ -1,0 +1,25 @@
+
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<body class='body'>
+
+<table border="1">
+<tr>
+<th>Username</th>
+
+<th>Email</th>
+<th>Place</th>
+<th>Address</th>
+
+</tr>
+{% for i in UserlistView %}
+<tr>
+<td><a href="{% url 'User' i.id %}">{{i.user_data.username}}</a></td>
+
+<td>{{i.user_data.email}}</td>
+<td>{{i.place}}</td>
+<td>{{i.address}}
+</tr>
+{% endfor %}
+</body>
+</html>

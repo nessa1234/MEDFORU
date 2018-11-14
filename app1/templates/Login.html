@@ -1,0 +1,86 @@
+
+{% block content %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div class="container">
+	<div class="login-page">
+  		<div class="form">
+    		<form class="register-form" method="post" onsubmit="return get_action();">
+    			{% csrf_token %}
+    			{{ form.as_p }}
+    			
+    
+   				<div class="g-recaptcha" data-sitekey="6LdOIHcUAAAAANEIrwu0y-rSDWAikhU5oBVyQ-SY" data-callback="verifyCaptcha"></div>
+          <div id="g-recaptcha-error"></div>
+          <button type="submit">Login</button> Not a member yet?<a href="{% url 'register' %}">Register</a>
+          <a href="">Forgot password</a>
+          <div class="w3-display-bottomright"></div>
+          <script src='https://www.google.com/recaptcha/api.js'></script>
+          
+   				
+
+ 			 </form>
+ 			 <p><strong>-- OR --</strong></p>
+				 <button><a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a><br></button>
+         <button><a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a></button>+
+
+			
+ 		</div>
+
+
+ 	</div>
+</div> 
+
+
+</body>
+<script type="text/javascript">
+        function get_action() {
+            var v = grecaptcha.getResponse();
+            console.log("Resp" + v);
+            if (v.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML = "You can't leave Captcha Code empty";
+                return false;
+            }
+            else {
+                document.getElementById('g-recaptcha-error').innerHTML = "Captcha completed";
+                return true;
+            }
+        }
+
+        function verifyCaptcha(){
+            document.getElementById('g-recaptcha-error').innerHTML='';
+        }
+    </script>
+  
+{% endblock %}

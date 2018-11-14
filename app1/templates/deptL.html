@@ -1,0 +1,23 @@
+
+{% extends 'home.html' %}
+<div class="w3-container" id="menu" style="width:100%; margin-top: 30px; height:400px; overflow: hidden;">
+  <div class="w3-content" style="max-width:100%;">
+ 
+    <div class="w3-row w3-center w3-card w3-padding">
+      {% for i in DepartmentListView %}
+     <tr>
+      <td><a href="{% url 'D_Detail' i.id %}"><img src="{{i.depart_photo.url}}" height="100px" width="100px"></a></td><br>
+      <td>{{i.depart_name}}</td><br>
+      <td>{{i.depart_description}}</td><br>
+    </tr>
+     
+     {% endfor %}
+ 
+
+  
+     
+    </div> 
+  </div>
+</div>
+
+

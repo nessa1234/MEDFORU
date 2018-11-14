@@ -1,0 +1,39 @@
+
+{% load static from staticfiles%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </head>
+<body>
+<div class="container">
+
+<table border="2">
+	<tr>
+		<th>Image</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Speciality</th>
+		<th>Age</th>
+		
+	</tr>
+	<tr>
+		<td><img src="{{details.Doc_photo.url}}" height="100px" width="100px"></td>
+		<td>{{details.Doc_name}}</td>
+		<td>{{details.Doc_email}}</td>
+		<td>{{details.Doc_Speciality}}</td>
+		<td>{{details.Doc_age}}</td>
+		<td><a href="{% url 'scheduledet' i.id%}">BOOK NOW</a></td>
+	
+	</tr>
+
+</table>
+</div>
+</body>
+</html>

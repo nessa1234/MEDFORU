@@ -1,0 +1,50 @@
+{% load static from staticfiles %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/medi.css' %}">
+</head>
+<body>
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-grayscale">
+    <div class="w3-col s2 w3-button w3-block w3-black">
+     <a href=""><img class='logo' src="{% static 'images/logo1.png' %}">
+      <b><h1 class='he1'>MED4U</h1></b> </a>
+    </div>
+    <div class="w3-col s2 w3-button w3-block w3-black">
+      <a href="{% url 'D_View2' %}" class="">HOME</a>
+    </div>
+
+    <div class="w3-col s2 w3-button w3-block w3-black">
+      <a href="{% url 'Doclist' %}">DOCTORS</a>
+    </div>
+    <div class="w3-col s2 w3-button w3-block w3-black">
+      <a href="{% url 'DepartView' %}"">DEPARTMENT</a>
+    </div>
+    <div class="w3-col s2 w3-button w3-block w3-black">
+      <a href="{% url 'schedule1' %}">BOOKING</a>
+    </div>
+    <div class="w3-col s2 w3-button w3-block w3-black">
+        <a href=""><span class="glyphicon glyphicon-user"></span>{{user.username}}</a>
+
+        <a href="/logout/"><span class="glyphicon glyphicon-log-in">Logout</span></a>
+    </div>
+  </div>
+  
+</div><!-- Header with image -->
+
+
+
+
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+ 
+  <div class="w3-display-bottomright w3-center">
+    <span class="w3-text-black" style="font-family: serif;
+    font-size: 30px;}"><b>NORTH KANSASCITY<br>HOSPITAL</b></span>
+  </div>
+  <div class="w3-display-bottomleft w3-center w3-padding-large">
+    <span class="w3-text-darkblue">152 Ravinagar street, 218/350</span> 
+
+  </div>
+
+ 
+</header>
+

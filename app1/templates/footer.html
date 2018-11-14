@@ -1,0 +1,63 @@
+{% load static from staticfiles %}
+<div class="container-fluid bg-grey" style="width: 700px; float: left;">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="date">
+      <p id="demo"></p>
+
+        <script>
+          var d = new Date();
+              document.getElementById("demo").innerHTML = d;
+        </script>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>152 Ravinagar street, 218/350</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91-8606746392</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>med4u18@gmail.com</p>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+   <div class="row">
+    <div class="col-sm-6">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>152 Ravinagar street, 218/350</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91-8606746392</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> med4u18@gmail.com</p>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->

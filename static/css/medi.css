@@ -1,0 +1,46 @@
+.logo {
+  height: 40px;
+  width:80px;
+  float: left;
+  margin:2px 0 5px 0;
+}
+.he1{
+  float: left;
+  height:15px;
+  width:50px;
+  margin:2px 0 5px 0;
+  color: white;
+  text-shadow: 1px 1px lightgrey;
+  font-family: "Inconsolata", sans-serif;
+
+
+}
+.w3-col{
+  margin: 2px 0px 5px 0px;
+  height: 60px;}
+
+
+
+
+#more {display: none;}
+.w3-top{
+  height:120px;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/static/images/2.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none
+  }
+
+.login{float:right;
+
+}

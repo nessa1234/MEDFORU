@@ -1,0 +1,26 @@
+
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<body class='body'>
+
+<table border="1">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Speciality</th>
+<th>Age</th>
+<th>Image</th>
+<th>....</th>
+</tr>
+{% for i in DocListView %}
+<tr>
+<td><a href="{% url 'Details' i.id %}">{{i.Doc_name}}</a></td>
+<td>{{i.Doc_email}}</td>
+<td>{{i.Doc_Speciality}}</td>
+<td>{{i.Doc_age}}</td>
+<td><img src="{{i.Doc_photo.url}}" height="100px" width="100px"></td>
+<td><a href="{% url 'update' i.id %}">update</a></td>
+</tr>
+{% endfor %}
+</body>
+</html>

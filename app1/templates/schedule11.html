@@ -1,0 +1,48 @@
+{% extends 'home.html' %}
+<!DOCTYPE html>
+<html>
+{% block content %}
+<head>
+<style>
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+</style>
+</head>
+<body>
+<h3 class="w3-center w3-padding-50"><span class="w3-tag w3-wide">AVAILABILITY OF THE DOCTOR</span></h3>
+
+
+
+<table style="border-collapse: collapse; width: 100%;">
+    {% for i in Schedule1 %}
+  <tr>
+    <th>DOCTOR NAME</th>
+    <th>AVAILABLE DATE</th>
+    <th>FROM</th>
+    <th>TO<th>
+    <th>TOTAL PEOPLE</th>
+    <th>UPDATE</th>
+  </tr>
+  <tr>
+    <td>{{i.dc_name}}</td>
+    <td>{{i.day}}</td>
+    <td>{{i.start_time}}</td>
+    <td>{{i.end_time}}</td>
+    <td>{{i.num_ppl}}</td>
+    <td><a href="{% url 'schedule2' i.id %}">update</a></td>
+
+  </tr>
+
+   {% endfor %}
+</table>
+
+
+</body>
+{% endblock %}
+</html>
